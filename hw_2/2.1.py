@@ -2,7 +2,6 @@ import argparse
 from latex_generator_hbashift import generate_latex_table, generate_latex_image
 
 def main(output_file):
-    # Пример данных для таблицы
     data = [
         ["Name", "Age", "Country"],
         ["Alice", 30, "USA"],
@@ -10,10 +9,8 @@ def main(output_file):
         ["Charlie", 35, "Canada"]
     ]
 
-    # Генерация LaTeX-кода для таблицы
     latex_code = generate_latex_table(data)
 
-    # Запись кода в файл
     with open(output_file, "w") as f:
         f.write("\\documentclass{article}\n")
         f.write("\\usepackage[utf8]{inputenc}\n")
